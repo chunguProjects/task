@@ -8,12 +8,9 @@ const db = require("./app/models");
 const app = express();
 
 //set origin
-var corsOptions = {
-origin: "http://localhost:8081"
-};
 
 //add cors and bodyPerser modules to the express app
-app.use(cors(corsOptions));
+app.use(cors());
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
